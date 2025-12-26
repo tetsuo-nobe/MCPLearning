@@ -44,8 +44,7 @@
 
 * Claude DeskTop での MCP 設定
   - ファイル - 設定 - 開発者 - 設定を編集
-  - 構成ファイルは下記
-    `C:\Users\tnobe\AppData\Roaming\Claude\claude_desktop_config.json`
+  - 構成ファイルは `C:\Users\tnobe\AppData\Roaming\Claude\claude_desktop_config.json`
 
 * Claude Desktop の MCP 構成ファイル
     - C:\Users\tetsu\AppData\Roaming\Claude\claude_desktop_config.json
