@@ -34,36 +34,32 @@
     npx @modelcontextprotocol/inspector uv run python calculator_server.py
     ```
 
-----------------
+  - Inspector 実行時に下記のようにファイル名の前に .\ をつけるとエラーになるので注意
+    ```
+    npx @modelcontextprotocol/inspector uv run python .\calculator_server.py
+    ```
+ 
+    ```
+    can't open file 'C:\\Users\\tnobe\\Desktop\\MCP_Learning\\.calculator_server.py': [Errno 2] No such file or directory
+    ```
 
-ファイル名の前に .\ をつけるとエラーになる
-npx @modelcontextprotocol/inspector uv run python .\calculator_server.py
-
-C:\Users\tnobe\AppData\Roaming\uv\python\cpython-3.10.17-windows-x86_64-none\python.exe: can't open file 'C:\\Users\\tnobe\\Desktop\\MCP_Learning\\.calculator_server.py': [Errno 2] No such file or directory
-
-------------------
-
-ファイル - 設定 - 開発者 - 設定を編集
-
-C:\Users\tnobe\AppData\Roaming\Claude\claude_desktop_config.json
-
-PowerShell での環境変数の設定は下記のようにする
-
-$env:MCP_TRANSPORT = "http"
-
-パスに全角を含むとパスが認識できずエラーになる
-
-HTTPの場合、Claude Desktop からは直接使えない
-
-下記を実行することで、mcp-proxy経由で使用できる
-
-uv  tool install mcp-proxy 
-
+* Claude DeskTop での MCP 設定
+  - ファイル - 設定 - 開発者 - 設定を編集
+  - 構成ファイルは下記
+    `C:\Users\tnobe\AppData\Roaming\Claude\claude_desktop_config.json`
 
 * Claude Desktop の MCP 構成ファイル
     - C:\Users\tetsu\AppData\Roaming\Claude\claude_desktop_config.json
     - 変更した後は、Claude Desktop を再起動する
         - Windows の場合、Task Manager でゾンビプロセスも必ず終了させてから起動する
+     
+    - パスに全角を含むとパスが認識できずエラーになる
+    - Stdio ではなく HTTP の場合、Claude Desktop からは直接使えない
+        - 下記を実行することで、mcp-proxy 経由で使用できる
+        - ```
+          uv  tool install mcp-proxy
+          ```
+* 構成ファイル例    
 ```
 {
   "mcpServers": {
@@ -118,3 +114,4 @@ uv  tool install mcp-proxy
   }
 }
 ```
+
