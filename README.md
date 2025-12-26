@@ -1,11 +1,11 @@
 * 書籍: MCP入門 生成AIアプリ本格開発
-    - [https://gihyo.jp/book/2025/978-4-297-15295-6]
+    - https://gihyo.jp/book/2025/978-4-297-15295-6
 
 * 付録
-   - [https://nova-join-5c4.notion.site/_-1-_Cursor-MCP-272b1102fb33807aab47f754eb815a6a]
+   - https://nova-join-5c4.notion.site/_-1-_Cursor-MCP-272b1102fb33807aab47f754eb815a6a
 
 * オリジナル
-    - [https://github.com/gamasenninn/MCP_Learning/tree/main]
+    - https://github.com/gamasenninn/MCP_Learning/tree/main
 
 * このリポジトリではオリジナルと異なり chapter09 で使用する基盤モデルを Amazon Bedrock の Anthropic Claude にしている。
     - オリジナルは OpenAI の GPT を使用
