@@ -16,17 +16,17 @@
     ```
 * uv 初期化
   ```
-  - uv init
+  uv init
   ```
 
 * uv でパッケージを追加
     ```
-  - uv add fastmcp
+  　uv add fastmcp
     ```
 
 * uv で Python 実行
   ```
-  - uv run python .\calculator_server.py
+  uv run python .\calculator_server.py
   ```
 
 * Inspector を MCP サーバーと同時に起動
