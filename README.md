@@ -21,7 +21,7 @@
 
 * uv でパッケージを追加
   - ```
-  　uv add fastmcp
+    uv add fastmcp
     ```
 
 * uv で Python 実行
