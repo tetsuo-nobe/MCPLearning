@@ -15,19 +15,19 @@
     uv self update
     ```
 * uv 初期化
-  ```
-  uv init
-  ```
+  - ```
+    uv init
+    ```
 
 * uv でパッケージを追加
-    ```
+  - ```
   　uv add fastmcp
     ```
 
 * uv で Python 実行
-  ```
-  uv run python .\calculator_server.py
-  ```
+  - ```
+    uv run python .\calculator_server.py
+    ```
 
 * Inspector を MCP サーバーと同時に起動
   - ```
@@ -39,9 +39,8 @@
     npx @modelcontextprotocol/inspector uv run python .\calculator_server.py
     ```
  
-    ```
-    can't open file 'C:\\Users\\tnobe\\Desktop\\MCP_Learning\\.calculator_server.py': [Errno 2] No such file or directory
-    ```
+    * エラー
+      - `can't open file 'C:\\Users\\tnobe\\Desktop\\MCP_Learning\\.calculator_server.py': [Errno 2] No such file or directory`
 
 * Claude DeskTop での MCP 設定
   - ファイル - 設定 - 開発者 - 設定を編集
