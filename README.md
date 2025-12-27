@@ -50,13 +50,8 @@
     - C:\Users\tetsu\AppData\Roaming\Claude\claude_desktop_config.json
     - 変更した後は、Claude Desktop を再起動する
         - Windows の場合、Task Manager でゾンビプロセスも必ず終了させてから起動する
-     
     - パスに全角を含むとパスが認識できずエラーになる
-    - Stdio ではなく HTTP の場合、Claude Desktop からは直接使えない
-        - 下記を実行することで、mcp-proxy 経由で使用できる
-        - ```
-          uv  tool install mcp-proxy
-          ```
+
 * 構成ファイル例    
 ```
 {
@@ -113,3 +108,20 @@
 }
 ```
 
+* Streamable HTTP の場合の例
+  - Stdio ではなく HTTP の場合、Claude Desktop からは直接使えない
+    - 下記を実行することで、mcp-proxy 経由で使用できる
+    - ```
+      uv  tool install mcp-proxy
+      ```
+      
+    - ```
+        "calculator-http": {
+              "command": "mcp-proxy",
+              "args": [
+                  "--transport","streamablehttp",
+                  "http://localhost:8000/mcp"
+               ]
+        }
+     ```
+  
